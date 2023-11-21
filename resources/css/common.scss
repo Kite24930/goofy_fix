@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Oswald:wght@600&family=Sawarabi+Gothic&display=swap');
+//英語ロゴ用フォント
+//font-family: 'Acme', sans-serif;
+//英語テキスト用フォント
+//font-family: 'Oswald', sans-serif;
+//日本語表記用フォント
+//font-family: 'Sawarabi Gothic', sans-serif;
+@import url('bootstrap');
+@import url('bootstrap-icons');
+
+:root {
+    --dull-green: #91a4aa;
+    --dull-orange: #F2D3BB;
+    --dull-red: #9b7f85;
+    --dull-yellow: #FAE7CE;
+    --dule-lime: #D9E0D5;
+    --dull-blue: #acbccf;
+    --dull-beige: #D5A98E;
+    --goofy-color: #D5A98E;
+}
+
+* {
+
+}
+
+.en {
+    font-family: 'Acme', sans-serif;
+}
+
+.en-text {
+    font-family: 'Oswald', sans-serif;
+}
+
+.ja {
+    font-family: 'Sawarabi Gothic', sans-serif;
+}
+
+.btn {
+    background-color: var(--dull-red);
+    border: var(--dull-green) solid 1px;
+    &:hover {
+        opacity: 0.8;
+        background-color: var(--dull-red);
+        border: var(--dull-green) solid 1px;
+    }
+}
+
+.bg-dull-green {
+    background-color: var(--dull-green);
+}
+
+.bg-dull-orange {
+    background-color: var(--dull-orange);
+}
+
+.bg-dull-red {
+    background-color: var(--dull-red);
+}
+
+.bg-dull-yellow {
+    background-color: var(--dull-yellow);
+}
+
+.bg-dull-lime {
+    background-color: var(--dule-lime);
+}
+
+.bg-dull-blue {
+    background-color: var(--dull-blue);
+}
+
+.bg-dull-beige {
+    background-color: var(--dull-beige);
+}
+
+.bg-goofy-color {
+    background-color: var(--goofy-color);
+}
+
+.text-goofy-color {
+    color: var(--goofy-color);
+}
+
+.fs-0 {
+    font-size: 5rem;
+}
+
+@for $i from 1 to 20 {
+    .w-#{$i * 5} {
+        width: $i * 5%;
+    }
+
+    .vw-#{$i * 5} {
+        width: $i * 5vw;
+    }
+
+    .mw-#{$i * 5} {
+        max-width: $i * 5vw;
+    }
+
+    .h-#{$i * 5} {
+        height: $i * 5%;
+    }
+
+    .vh-#{$i * 5} {
+        height: $i * 5vh;
+    }
+
+    .vhw-#{$i * 5} {
+        height: $i * 5vw;
+    }
+
+    .z-index-#{$i * 10} {
+        z-index: $i * 10;
+    }
+}
+
+.text-black {
+    color: black;
+}
+
+.img-height-1rem {
+    height: 2rem;
+}
+
+.white-btn {
+    background-color: white;
+    color: black;
+    &:hover {
+        background-color: lightgray;
+    }
+}
+
+.black-btn {
+    background-color: black;
+    color: white;
+    &:hover {
+        background-color: #333;
+    }
+}
+
+.goofy-color-btn {
+    background-color: var(--goofy-color);
+    color: white;
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.sponsor {
+    background-color: lightgrey;
+    color: black;
+    &:hover {
+        background-color: black;
+        cursor: pointer;
+        color: white;
+    }
+}
+
+.square {
+    &:before {
+        content: '';
+        display: block;
+        padding-top: 100%;
+    }
+}
+
+body {
+    font-family: 'Sawarabi Gothic', sans-serif;
+    padding-top: 25vh;
+    z-index: 500;
+}
+
+header {
+    height: 25vh;
+    a {
+        color: black;
+        text-decoration: none;
+    }
+    #header-center {
+        height: 25vh;
+        .logo {
+            height: 20vh;
+        }
+        .under-area {
+            height: 5vh;
+        }
+    }
+    .scroll-btn, {
+        &:hover {
+            cursor: pointer;
+            background-color: black;
+            color: white;
+        }
+    }
+    z-index: 800;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 12vh;
+    }
+
+    header {
+        height: 12vh;
+        #header-center {
+            .logo {
+                height: 12vh;
+            }
+        }
+    }
+}
