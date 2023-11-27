@@ -33,7 +33,7 @@ class MainController extends Controller
             'section_items' => SectionItem::all(),
             'schools' => School::all(),
             'food' => Food::all(),
-            'food_trucks' => FoodTruck::find(1),
+            'food_truck' => FoodTruck::find(1),
             'contact_types' => ContactType::all(),
             'contacts' => Contact::all(),
             'sponsors' => Sponsor::all(),

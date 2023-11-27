@@ -215,9 +215,9 @@
         <div id="foodTruck" class="w-100 d-flex flex-column justify-content-center align-items-center">
             <div class="en-text fs-0 text-goofy-color">FOOD TRUCK</div>
             <div class="w-70 text-center">
-                <img src="{{ asset('storage/'.$food_trucks->food_truck_img) }}" alt="" class="w-30">
+                <img src="{{ asset('storage/'.$food_truck->food_truck_img) }}" alt="" class="container-sm top-img">
             </div>
-            <div id="foodTruckViewer">
+            <div id="foodTruckViewer" class="w-full flex flex-col items-center text-center">
 
             </div>
         </div>
@@ -250,9 +250,25 @@
             @else
                 <div class="d-flex flex-column flex-md-row justify-content-center align-items-center flex-wrap">
                     @foreach($sponsors as $sponsor)
-                        <a href="{{ $sponsor->sponsor_url }}" class="m-2 px-3 py-2 sponsor text-center text-decoration-none">
-                            {!! nl2br(e($sponsor->sponsor_name)) !!}
-                        </a>
+                        @if($sponsor->sponsor_url)
+                            <a href="{{ $sponsor->sponsor_url }}" class="m-2 px-3 py-2 sponsor text-center text-decoration-none d-flex align-items-center">
+                                @if($sponsor->sponsor_logo)
+                                    <div class="p-2 rounded-pill bg-white me-2">
+                                        <img src="{{ asset('storage/sponsor/'.$sponsor->sponsor_logo) }}" alt="" class="sponsor-logo">
+                                    </div>
+                                @endif
+                                {!! nl2br(e($sponsor->sponsor_name)) !!}
+                            </a>
+                        @else
+                            <a href="{{ $sponsor->sponsor_url }}" class="m-2 px-3 py-2 sponsor text-center d-flex align-items-center">
+                                @if($sponsor->sponsor_logo)
+                                    <div class="p-2 rounded-pill bg-white me-2">
+                                        <img src="{{ asset('storage/sponsor/'.$sponsor->sponsor_logo) }}" alt="" class="sponsor-logo">
+                                    </div>
+                                @endif
+                                {!! nl2br(e($sponsor->sponsor_name)) !!}
+                            </a>
+                        @endif
                     @endforeach
                 </div>
             @endif
@@ -269,14 +285,14 @@
         window.Laravel.section_items = @json($section_items);
         window.Laravel.schools = @json($schools);
         window.Laravel.food = @json($food);
-        window.Laravel.food_trucks = @json($food_trucks);
+        window.Laravel.food_truck = @json($food_truck);
         window.Laravel.contacts = @json($contacts);
         window.Laravel.contact_types = @json($contact_types);
         window.Laravel.sponsors = @json($sponsors);
         window.Laravel.left_links = @json($left_links);
         window.Laravel.right_links = @json($right_links);
         window.Laravel.coming_soon = @json($coming_soon);
-        console.log(window.Laravel);
+        // console.log(window.Laravel);
     </script>
     @vite(['resources/js/index.js'])
 </x-template>

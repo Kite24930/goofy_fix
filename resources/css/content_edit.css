@@ -1,0 +1,135 @@
+@import "bootstrap-icons/font/bootstrap-icons.css";
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Oswald:wght@600&family=Sawarabi+Gothic&display=swap");
+@import "@toast-ui/editor/dist/toastui-editor.css";
+@import "@toast-ui/editor/dist/toastui-editor-viewer.css";
+@import '@toast-ui/editor-plugin-color-syntax/dist/toastui-editor-plugin-color-syntax.css';
+:root {
+  --dull-green: #91a4aa;
+  --dull-orange: #F2D3BB;
+  --dull-red: #9b7f85;
+  --dull-yellow: #FAE7CE;
+  --dule-lime: #D9E0D5;
+  --dull-blue: #acbccf;
+  --dull-beige: #D5A98E;
+  --goofy-color: #D5A98E;
+}
+
+.en {
+  font-family: "Acme", sans-serif;
+}
+
+.en-text {
+  font-family: "Oswald", sans-serif;
+}
+
+.ja {
+  font-family: "Sawarabi Gothic", sans-serif;
+}
+
+.btn {
+  background-color: var(--dull-red);
+  border: var(--dull-green) solid 1px;
+}
+.btn:hover {
+  opacity: 0.8;
+  background-color: var(--dull-red);
+  border: var(--dull-green) solid 1px;
+}
+
+.bg-dull-green {
+  background-color: var(--dull-green);
+}
+
+.bg-dull-orange {
+  background-color: var(--dull-orange);
+}
+
+.bg-dull-red {
+  background-color: var(--dull-red);
+}
+
+.bg-dull-yellow {
+  background-color: var(--dull-yellow);
+}
+
+.bg-dull-lime {
+  background-color: var(--dule-lime);
+}
+
+.bg-dull-blue {
+  background-color: var(--dull-blue);
+}
+
+.bg-dull-beige {
+  background-color: var(--dull-beige);
+}
+
+.bg-goofy-color {
+  background-color: var(--goofy-color);
+}
+
+.text-goofy-color {
+  color: var(--goofy-color);
+}
+
+.white-btn {
+  background-color: white;
+  color: black;
+}
+.white-btn:hover {
+  background-color: lightgray;
+}
+
+.black-btn {
+  background-color: black;
+  color: white;
+}
+.black-btn:hover {
+  background-color: #333;
+}
+
+.goofy-color-btn {
+  background-color: var(--goofy-color);
+  color: white;
+}
+.goofy-color-btn:hover {
+  opacity: 0.8;
+}
+
+.sponsor {
+  background-color: lightgrey;
+  color: black;
+}
+.sponsor:hover {
+  background-color: black;
+  cursor: pointer;
+  color: white;
+}
+
+.square:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+#editor .tui-view-2 ul.tui-colorpicker-clearfix {
+  display: flex;
+  flex-wrap: wrap;
+}
+#editor .tui-view-2 div.tui-colorpicker-clearfix {
+  display: none;
+}
+#editor .tui-view-3 {
+  display: none !important;
+}
+#editor button {
+  position: relative;
+  top: 0;
+  right: 0;
+}
+
+#viewer a {
+  display: inline-block;
+}
+
+/*# sourceMappingURL=content_edit.css.map */

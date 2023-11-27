@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Acme&family=Oswald:wght@600&family=Sawarabi+Gothic&display=swap");
 @import url("bootstrap");
 @import url("bootstrap-icons");
+@import "@toast-ui/editor/dist/toastui-editor-viewer.css";
 :root {
   --dull-green: #91a4aa;
   --dull-orange: #F2D3BB;
@@ -730,6 +731,20 @@ img {
 .menu-goofy-border {
   border-top: var(--goofy-color) solid 5px;
   border-bottom: var(--goofy-color) solid 5px;
+}
+
+#foodTruck .top-img {
+  max-width: 500px;
+}
+
+#viewer a {
+  display: inline-block;
+}
+
+.sponsor-logo {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
 }
 
 @media (max-width: 768px) {

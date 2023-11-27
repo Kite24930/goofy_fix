@@ -5,6 +5,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Typed from "typed.js";
 import { Loader } from "@googlemaps/js-api-loader";
+import Editor from "@toast-ui/editor";
 import { app, analytics } from "./firebase.js";
 
 $('#slick').slick({
@@ -62,3 +63,9 @@ document.querySelectorAll('.scroll-btn').forEach(ele => {
         })
     })
 })
+
+const viewer = new Editor.factory({
+    el: document.getElementById('foodTruckViewer'),
+    viewer: true,
+    initialValue: Laravel.food_truck.food_truck_text,
+});

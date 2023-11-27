@@ -18,11 +18,15 @@
     "dependencies": {
         "@googlemaps/js-api-loader": "^1.16.2",
         "@popperjs/core": "^2.11.8",
+        "@toast-ui/editor": "^3.2.2",
+        "@toast-ui/editor-plugin-color-syntax": "^3.1.0",
+        "@toast-ui/editor-plugin-table-merged-cell": "^3.1.0",
         "bootstrap": "^5.3.2",
         "bootstrap-icons": "^1.11.1",
         "firebase": "^10.6.0",
         "jquery": "^3.7.1",
         "slick-carousel": "^1.8.1",
+        "sortablejs": "^1.15.0",
         "typed.js": "^2.1.0"
     }
 }
