@@ -182,8 +182,9 @@
                 </div>
             </div>
             <div id="price" class="w-100 vhw-50 bg-goofy-color d-flex flex-md-row flex-column justify-content-end align-items-center">
-                <div class="w-50 h-100 m-0 d-md-block d-none">
-                    <img src="{{ asset('storage/park.jpg') }}" alt="" class="w-100 h-100">
+                <div class="w-50 h-100 m-0 d-md-block d-none position-relative">
+                    <a href="{{ route('admin.edit.price_img') }}" class="edit-panel" data-target="welcome_eng_msg"><i class="bi bi-pencil-square"></i></a>
+                    <img src="{{ asset('storage/'.$price_img->img) }}" alt="" class="w-100 h-100">
                 </div>
                 <div class="w-50 h-100 m-md-0 px-5 d-flex flex-column justify-content-center align-items-center bg-goofy-color text-white position-relative">
                     <img src="{{ asset('storage/rust_lt.png') }}" alt="" class="position-absolute top-0 start-0 h-30 z-index-100">
@@ -212,8 +213,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-50 h-100 m-0 d-md-none">
-                    <img src="{{ asset('storage/park.jpg') }}" alt="" class="w-100 h-100">
+                <div class="w-50 h-100 m-0 d-md-none position-relative">
+                    <a href="{{ route('admin.edit.price_img') }}" class="edit-panel" data-target="welcome_eng_msg"><i class="bi bi-pencil-square"></i></a>
+                    <img src="{{ asset('storage/'.$price_img->img) }}" alt="" class="w-100 h-100">
                 </div>
             </div>
             <div id="section" class="container-md mw-70 d-flex flex-column justify-content-center align-items-center position-relative">

@@ -12,6 +12,7 @@ use App\Models\FoodTruck;
 use App\Models\LeftLink;
 use App\Models\Price;
 use App\Models\PriceContent;
+use App\Models\PriceImg;
 use App\Models\RightLink;
 use App\Models\School;
 use App\Models\Section;
@@ -33,6 +34,7 @@ class AdminController extends Controller
             'addresses' => Address::all(),
             'price_contents' => PriceContent::all(),
             'prices' => Price::all(),
+            'price_img' => PriceImg::find(1),
             'sections' => Section::all(),
             'section_items' => SectionItem::all(),
             'schools' => School::all(),
@@ -410,6 +412,46 @@ class AdminController extends Controller
         } catch (\Exception $e) {
             DB::rollBack();
             return back()->with('error', 'Price Content deleted failed!');
+        }
+    }
+
+    public function editPriceImg()
+    {
+        $data = [
+            'price_img' => PriceImg::find(1),
+        ];
+        return view('admin.edit.price_img', $data);
+    }
+
+    public function updatePriceImg(Request $request)
+    {
+        $request->validate([
+            'price_img' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ],
+        [
+            'price_img.required' => '画像を選択してください。',
+            'price_img.image' => '画像ファイルを選択してください。',
+            'price_img.mimes' => '画像ファイルを選択してください。',
+            'price_img.max' => '画像ファイルは2MB以下にしてください。',
+        ]);
+
+        try {
+            $image = InterventionImage::make($request->file('price_img'));
+            $image->orientate();
+            $img_name = $request->file('price_img')->getClientOriginalName();
+            $filePath = storage_path('app/public/'.$img_name);
+            $image->save($filePath);
+
+            $data = [
+                'img' => $img_name,
+            ];
+
+            $price_img = PriceImg::find(1);
+            $price_img->update($data);
+
+            return back()->with('success', 'Price Image updated successfully!');
+        } catch (\Exception $e) {
+            return back()->with('error', 'Price Image updated failed!');
         }
     }
 

@@ -12,6 +12,7 @@ use App\Models\FoodTruck;
 use App\Models\LeftLink;
 use App\Models\Price;
 use App\Models\PriceContent;
+use App\Models\PriceImg;
 use App\Models\RightLink;
 use App\Models\School;
 use App\Models\Section;
@@ -29,6 +30,7 @@ class MainController extends Controller
             'addresses' => Address::all(),
             'price_contents' => PriceContent::all(),
             'prices' => Price::all(),
+            'price_img' => PriceImg::find(1),
             'sections' => Section::all(),
             'section_items' => SectionItem::all(),
             'schools' => School::all(),

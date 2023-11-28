@@ -51,6 +51,9 @@ Route::middleware('auth')->group(function () {
     Route::post('/edit/price/content', [AdminController::class, 'updatePriceContent'])->name('admin.update.price.content');
     Route::post('/edit/price/delete/{id}', [AdminController::class, 'destroyPrice'])->name('admin.destroy.price');
     Route::post('/edit/price/content/delete/{id}', [AdminController::class, 'destroyPriceContent'])->name('admin.destroy.price.content');
+//    プライス横写真編集
+    Route::get('/edit/price_img', [AdminController::class, 'editPriceImg'])->name('admin.edit.price_img');
+    Route::post('/edit/price_img', [AdminController::class, 'updatePriceImg'])->name('admin.update.price_img');
 //    セクション編集
     Route::get('/edit/section', [AdminController::class, 'editSection'])->name('admin.edit.section');
     Route::post('/edit/section/part/{id}', [AdminController::class, 'updateSection'])->name('admin.update.section');

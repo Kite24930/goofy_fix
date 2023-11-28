@@ -28,6 +28,7 @@ export default defineConfig({
                 concept: 'resources/js/concept.js',
                 address: 'resources/js/address.js',
                 price: 'resources/js/price.js',
+                priceImg: 'resources/js/priceImg.js',
                 section: 'resources/js/section.js',
                 food: 'resources/js/food.js',
                 foodTruck: 'resources/js/food_truck.js',
