@@ -1,4 +1,11 @@
 <x-template title="Goofy Skate Park" css="index.css" :left="$left_links" :right="$right_links">
+    <div id="transfer" class="w-100 d-flex flex-col justify-content-center align-items-center py-5 text-center">
+        <div class="fs-2 fw-bold py-5">
+            2024年12月25日より、<br class="d-md-none">パーク移転に伴い<br class="d-md-none">一時閉店致します。
+            <br>
+            移転後は津市高茶屋にて<br class="d-md-none">春頃リニューアルオープン！
+        </div>
+    </div>
     <div class="position-relative">
         <ul id="slick" class="p-0">
             @for($i = 0; $i < $welcomes->top_img_count; $i++)
