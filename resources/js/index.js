@@ -31,7 +31,7 @@ window.addEventListener('load', () => {
         libraries: ['places'],
     });
     loader.load().then(() => {
-        const park = new google.maps.LatLng(34.73433753865971, 136.47260968408696);
+        const park = new google.maps.LatLng(34.67388721040584, 136.51761719208935);
         const map = new google.maps.Map(document.getElementById('map'), {
             zoom: 15,
             center: park,
